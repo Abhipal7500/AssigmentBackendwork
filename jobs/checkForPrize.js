@@ -1,5 +1,5 @@
 const checkForPrize = () => {
-    return Math.random() < 0.25; // 25% chance of winning a prize
+    return Math.random() < 0.25; 
   };
   
   module.exports = checkForPrize;

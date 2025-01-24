@@ -6,7 +6,6 @@ const User = require("../models/User");
 
 const router = express.Router();
 
-// Register User or Retrieve Existing User
 router.post("/register", async (req, res) => {
   const { email } = req.body;
 
@@ -19,7 +18,6 @@ router.post("/register", async (req, res) => {
   res.json(user);
 });
 
-// Handle Button Click
 router.post("/:email/click", async (req, res) => {
   const { email } = req.params;
   const points = calculatePoints();
@@ -37,7 +35,6 @@ router.post("/:email/click", async (req, res) => {
   }
 });
 
-// Fetch user details by email
 router.get("/:email", async (req, res) => {
     const { email } = req.params;
   
